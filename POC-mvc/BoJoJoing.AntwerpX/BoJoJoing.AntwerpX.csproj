@@ -45,12 +45,11 @@
     <Reference Include="EcmaScript.NET.modified, Version=0.1.1.0, Culture=neutral, PublicKeyToken=7d53ba4f537753a5, processorArchitecture=MSIL">
       <HintPath>..\packages\YUICompressor.NET.1.7.1.0\lib\net35\EcmaScript.NET.modified.dll</HintPath>
     </Reference>
-    <Reference Include="Jurassic">
+    <Reference Include="Jurassic, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Jurassic.2.1.1\lib\Jurassic.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SquishIt.Framework, Version=0.8.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SquishIt.0.8.6\lib\SquishIt.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -75,7 +74,6 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Yahoo.Yui.Compressor, Version=1.7.1.0, Culture=neutral, PublicKeyToken=f8b4b81ec75097e2, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\YUICompressor.NET.1.7.1.0\lib\net35\Yahoo.Yui.Compressor.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -131,12 +129,6 @@
     <None Include="test\qunit\qunit.css" />
     <None Include="test\qunit\qunit.js" />
     <None Include="test\tests.js" />
-    <Content Include="Libboerderij\SquishIt\AjaxMin.dll" />
-    <Content Include="Libboerderij\SquishIt\dotless.Core.dll" />
-    <Content Include="Libboerderij\SquishIt\EcmaScript.NET.modified.dll" />
-    <Content Include="Libboerderij\SquishIt\SquishIt.Framework.dll" />
-    <Content Include="Libboerderij\SquishIt\SquishIt.Mvc.dll" />
-    <Content Include="Libboerderij\SquishIt\Yahoo.Yui.Compressor.dll" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
