@@ -96,16 +96,15 @@
     <Content Include="demo\test_tubes.png" />
     <Content Include="GenericErrorPage.html" />
     <Content Include="humans.txt" />
-    <Content Include="js\libs\jquery-1.6.2.min.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
     <Content Include="js\libs\jquery.validate-vsdoc.js" />
     <Content Include="js\libs\jquery.validate.min.js" />
     <Content Include="js\libs\jquery.validate.unobtrusive.min.js" />
     <Content Include="js\libs\respond.min.js" />
-    <Content Include="js\libs\modernizr-2.0.min.js" />
     <Content Include="js\script.js" />
     <Content Include="packages.config" />
+    <Content Include="App_Code\LayoutHelpers.cshtml" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
     <None Include="_bin_deployableAssemblies\WebMatrix.WebData.xml" />
     <None Include="_bin_deployableAssemblies\WebMatrix.WebData.dll" />
@@ -129,6 +128,10 @@
     <None Include="test\qunit\qunit.css" />
     <None Include="test\qunit\qunit.js" />
     <None Include="test\tests.js" />
+    <Content Include="js\libs\modernizr-2.5.3.js" />
+    <Content Include="js\libs\jquery-1.7.1-vsdoc.js" />
+    <Content Include="js\libs\jquery-1.7.1.js" />
+    <Content Include="js\libs\jquery-1.7.1.min.js" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
@@ -193,7 +196,4 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <ItemGroup>
-    <Content Include="welcome.txt" />
-  </ItemGroup>
 </Project>
