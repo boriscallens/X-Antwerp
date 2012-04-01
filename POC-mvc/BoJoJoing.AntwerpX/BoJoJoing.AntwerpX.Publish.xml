@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="https://w03.winhost.com:8172/MsDeploy.axd" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="boriscallens.info" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Profile1" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="boriscal" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAChYe3DlSw0K8eJRm0y7lAwAAAAACAAAAAAAQZgAAAAEAACAAAADdUTH1Pd8aNyHD+aog3PwEK7DeyaLpHKtnp25i282m0wAAAAAOgAAAAAIAACAAAAB8QJA3oFy9+sVY/PRqFQEQUB6g+Pq1XsQRFTT6weNtzBAAAAAfoRYGKvxs1z+g73yNJFvkQAAAAP1qTodGP2QwrUlsB8AyASwbcKGc8mCAcRgeiNVR5VBZi8JJRfJ0NMrjboAL3lRl/HCZhCafCHxoQdvw6zICjlU=" SelectedForPublish="True" />
+</publishData>
