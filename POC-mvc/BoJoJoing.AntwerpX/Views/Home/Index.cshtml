@@ -2,7 +2,20 @@
 	Page.Title = "Home Page";
 }
 
-<h2>@ViewBag.Message</h2>
-<p>
-    TODO: Write you some codez, bro.
-</p>
+@section HeadContent
+{
+  <link href="@Url.Content("css/slideshow.css")" rel="stylesheet" type="text/css" />
+}
+
+<div id="slides">
+  <div class="slides_container">
+      <div class="slide">
+          <div class="item">
+              <img src="@Url.Content("/img/brochure.png")" alt="boerderij2"/>
+          </div>
+          <div class="item">
+            <img src="@Url.Content("/img/gebouw_1.png")" alt="boerderij"/>
+          </div>
+      </div>
+  </div>
+</div>

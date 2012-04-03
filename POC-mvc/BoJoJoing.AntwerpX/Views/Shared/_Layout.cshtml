@@ -27,14 +27,10 @@
                     .Render("~/css/style_#.css"))
 
     @RenderSection("HeadContent", false)
- 
-    <!-- All JavaScript at the bottom, except for Modernizr and Respond.
-        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
     @Html.Raw(Bundle.JavaScript()
                     .Add("~/js/libs/modernizr-2.5.3.js")
                     .Add("~/js/libs/respond.min.js")
-                    .ForceRelease()
+                    //.ForceRelease()
                     .Render("~/js/mondernizrandrespond_#.js"))
 </head>
 
@@ -43,11 +39,6 @@
         <header id="header">
             <div id="title">
                 <h1>Antwerp X</h1>
-            </div>
-
-            <div id="logindisplay">
-                &nbsp;
-                @* We aren't requiring a log on, put something here if you want one. *@                
             </div>
 
             <div id="menucontainer">
@@ -72,14 +63,13 @@
 
     @JqueryFromCDNWithFallBack("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", @Url.Content("~/js/libs/jquery-1.7.1.min.js"))
   
-    @* Add other javascript files here if you want them squished on release *@
     @Html.Raw(Bundle.JavaScript()
+                    .Add("~/js/slides.jquery.js")
                     .Add("~/js/plugins.js")
                     .Add("~/js/script.js")
-                    .ForceRelease()
+                    //.ForceRelease()
                     .Render("~/js/script_#.js"))
 
-    <!-- ADDED: Page Level script sections -->
     @RenderSection("ScriptSection", false)  
   
     <!--[if lt IE 7 ]>
@@ -101,16 +91,9 @@
 </html>
 
 @helper JqueryFromCDNWithFallBack(string cndUrl, string localUrl) {
-  @* JavaScript at the bottom for fast page loading *@
-  @* Grab Google CDN's jQuery. fall back to local if necessary *@
-  <script src="@cndUrl"></script>
-  <script> window.jQuery || window.onload
-    {
-      with (document.getElementsByTagName("head")[0].appendChild(document.createElement("script")))
-      {
-      setAttribute("id", "localJquery", 0);
-      setAttribute("type", "text/javascript", 0);
-      setAttribute("src", "@localUrl", 0);
-      }
-    }</script>
+    <script src="@cndUrl"></script>
+    <script>
+      if (typeof jQuery == 'undefined') {
+          document.write(unescape("%3Cscript src='@localUrl' type='text/javascript'%3E%3C/script%3E"));
+      } </script>
 }

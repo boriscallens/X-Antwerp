@@ -89,6 +89,7 @@
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="css\media.css" />
     <Content Include="css\site.css" />
+    <Content Include="css\slideshow.css" />
     <Content Include="demo\hack.css" />
     <Content Include="demo\hack2.css" />
     <Content Include="demo\internet_explorer.png" />
@@ -96,12 +97,17 @@
     <Content Include="demo\test_tubes.png" />
     <Content Include="GenericErrorPage.html" />
     <Content Include="humans.txt" />
+    <Content Include="img\brochure.png" />
+    <Content Include="img\gebouw_1.png" />
+    <Content Include="img\gebouw_2.png" />
+    <Content Include="img\gebouw_3.png" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
     <Content Include="js\libs\jquery.validate-vsdoc.js" />
     <Content Include="js\libs\jquery.validate.min.js" />
     <Content Include="js\libs\jquery.validate.unobtrusive.min.js" />
     <Content Include="js\libs\respond.min.js" />
+    <Content Include="js\libs\slides.jquery.js" />
     <Content Include="js\script.js" />
     <Content Include="packages.config" />
     <Content Include="App_Code\LayoutHelpers.cshtml" />
@@ -166,7 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="img\" />
     <Folder Include="js\mylibs\" />
     <Folder Include="Models\" />
   </ItemGroup>

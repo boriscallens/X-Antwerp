@@ -1,0 +1,12 @@
+﻿/*.slides_container
+{
+	width: 470px;
+	height: 170px;
+	display: none;
+}
+.slides_container div.slide
+{
+	width: 470px;
+	height: 170px;
+	display: block;
+}*/
