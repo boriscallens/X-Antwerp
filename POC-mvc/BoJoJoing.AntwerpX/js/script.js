@@ -1,3 +1,7 @@
   $(function(){
-    $("#slides").slides();
+    $("#slides").slides({
+        preload: true,
+        generateNextPrev: true,
+        responsive: true
+    });
   });
