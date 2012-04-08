@@ -112,16 +112,6 @@ page width. Or, you can specify an exact pixel width. */
 	_height: 1px; /* only IE6 applies CSS properties starting with an underscore */
 }
 
-#footer
-{
-	color: #999;
-	padding: 10px 0;
-	text-align: center;
-	line-height: normal;
-	margin: 0;
-	font-size: .9em;
-}
-
 /* TAB MENU   
 ----------------------------------------------------------*/
 ul#menu
@@ -321,4 +311,27 @@ div#title
 .tri-state
 {
 	width: 6em;
+}
+
+/* Sticky footer
+----------------------------------------------------------*/
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 42px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -42px; /* negative value of footer height */
+	height: 42px;
+	clear:both;} 
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
 }
