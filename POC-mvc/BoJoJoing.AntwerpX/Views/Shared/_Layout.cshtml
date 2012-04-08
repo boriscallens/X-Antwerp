@@ -4,58 +4,55 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
-
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+  <meta charset="utf-8" />
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
         Remove this if you use the .htaccess -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>@Page.Title</title>
-
-    <meta name="description" content="" />
-    <meta name="author" content="BoJoJoing" />
-    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    @Html.Raw(Bundle.Css()
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>@Page.Title</title>
+  <meta name="description" content="" />
+  <meta name="author" content="BoJoJoing" />
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  @Html.Raw(Bundle.Css()
                     .Add("~/css/normalize.css")
                     .Add("~/css/site.css")
                     .Add("~/css/media.css")
                     .Add("~/css/supersized.css")
-                    .Add("~/theme/supersized.shutter.css")
-                    .ForceRelease() // Test it out with minification
+                    .Add("~/css/supersized.shutter.css")
+      //.ForceRelease() // Test it out with minification
                     .Render("~/css/style_#.css"))
-    
-    @RenderSection("HeadContent", false)
-    @Html.Raw(Bundle.JavaScript()
+  @RenderSection("HeadContent", false)
+  @Html.Raw(Bundle.JavaScript()
                     .Add("~/js/libs/modernizr-2.5.3.js")
                     .Add("~/js/libs/respond.min.js")
-                    //.ForceRelease()
+                    .ForceRelease()
                     .Render("~/js/mondernizrandrespond_#.js"))
-                    
 </head>
-
 <body>
-    
-
-    @RenderBody()
-    @*<div id="container">
+  <div id="menucontainer">
+      <ul id="menu">
+          <li class="current-nav">@Html.ActionLink("Home", "Index", "Home")</li>
+          <li>@Html.ActionLink("Locatie", "Location", "Home")</li>
+          <li>@Html.ActionLink("Ontwerp", "Design", "Home")</li>
+          <li>@Html.ActionLink("Duurzaamheid", "Durability", "Home")</li>
+          <li>@Html.ActionLink("Brochure", "Brochure", "Home")</li>
+      </ul>
+      <a href="https://twitter.com" target="blanck">
+        <img id="twitterIcon" alt="twitter bird icon" src="@Url.Content("~/img/twitterSmall.png")"/>
+      </a>
+  </div>
+  @RenderBody()
+  @*<div id="container">
         <header id="header">
             <div id="title">
                 <h1>Antwerp X</h1>
             </div>
 
-            <div id="menucontainer">
-                <ul id="menu">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Locatie", "Location", "Home")</li>
-                    <li>@Html.ActionLink("Ontwerp", "Design", "Home")</li>
-                    <li>@Html.ActionLink("Duurzaamheid", "Durability", "Home")</li>
-                    <li>@Html.ActionLink("Brochure", "Brochure", "Home")</li>
-                </ul>
-            </div>
+          
         </header>
 
         <div id="main" role="main">
@@ -64,43 +61,38 @@
 
         <footer id="footer">
         </footer>  
-    </div> *@ 
-  
-
-    @JqueryFromCDNWithFallBack("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", @Url.Content("~/js/libs/jquery-1.7.1.min.js"))
-  
-    @Html.Raw(Bundle.JavaScript()
+    </div> *@
+  @JqueryFromCDNWithFallBack("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", @Url.Content("~/js/libs/jquery-1.7.1.min.js"))
+  @Html.Raw(Bundle.JavaScript()
                     .Add("~/js/libs/jquery.easing.1.3.js")
                     .Add("~/js/libs/supersized.3.2.7.js")
-                    .Add("~/theme/supersized.shutter.min.js")
+                    .Add("~/js/libs/supersized.shutter.min.js")
                     .Add("~/js/plugins.js")
                     .Add("~/js/script.js")
-                    //.ForceRelease()
+                    .ForceRelease()
                     .Render("~/js/script_#.js"))
-    @RenderSection("ScriptSection", false)  
-  
-    <!--[if lt IE 7 ]>
+  @RenderSection("ScriptSection", false)
+  <!--[if lt IE 7 ]>
         <script src="@Url.Content("~/js/libs/dd_belatedpng.js")"></script>
         <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
     <![endif]-->
-
-    <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
-    <!-- Commented out until you deploy -->
-    @*<script>
+  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+  <!-- Commented out until you deploy -->
+  @*<script>
       var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
       (function (d, t) {
-          var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.async = 1;
-          g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g, s)
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.async = 1;
+        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
       } (document, 'script'));
-  </script>*@  
+  </script>*@
 </body>
 </html>
-
-@helper JqueryFromCDNWithFallBack(string cndUrl, string localUrl) {
-    <script src="@cndUrl"></script>
-    <script>
-      if (typeof jQuery == 'undefined') {
-          document.write(unescape("%3Cscript src='@localUrl' type='text/javascript'%3E%3C/script%3E"));
-      } </script>
+@helper JqueryFromCDNWithFallBack(string cndUrl, string localUrl)
+  {
+  <script src="@cndUrl"></script>
+  <script>
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='@localUrl' type='text/javascript'%3E%3C/script%3E"));
+    } </script>
 }
