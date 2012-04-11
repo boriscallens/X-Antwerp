@@ -36,15 +36,17 @@
     <div id="wrap">
         <div id="menucontainer">
             <ul id="menu">
-                <li class="current-nav">@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("Locatie", "Location", "Home")</li>
-                <li>@Html.ActionLink("Ontwerp", "Design", "Home")</li>
-                <li>@Html.ActionLink("Duurzaamheid", "Durability", "Home")</li>
-                <li>@Html.ActionLink("Brochure", "Brochure", "Home")</li>
+                <li class="current-nav">@Html.ActionLink("X ANTWERPEN", "Index", "Home")</li>
+                <li>@Html.ActionLink("LOCATIE", "Location", "Home")</li>
+                <li>@Html.ActionLink("ONTWERP", "Design", "Home")</li>
+                <li>@Html.ActionLink("DUURZAAMHEID", "Durability", "Home")</li>
+                <li>@Html.ActionLink("BROCHURE", "Brochure", "Home")</li>
+                <li>@Html.ActionLink("BROCHURE", "Brochure", "Home")</li>
             </ul>
             <a href="https://twitter.com" target="blanck">
                 <img id="twitterIcon" alt="twitter bird icon" src="@Url.Content("~/img/twitterSmall.png")"/>
             </a>
+            <a id="contactLink" href="mailto:contact@xantwerpen.be">CONTACT</a>
         </div>
         @RenderBody()
     </div>
@@ -58,26 +60,26 @@
 				    <span class="slidenumber"></span> / <span class="totalslides"></span>
 			    </div>*@
 			
-			    <!--Slide captions displayed here-->
-			    <div id="slidecaption"></div>
-			
 			    <!--Thumb Tray button-->
 			    <a id="tray-button"><img id="tray-arrow" src="img/button-tray-up.png" alt="tray button"/></a>
 			
 			    <!--Navigation-->
 			    <ul id="slide-list"></ul>
 			
-		    </div>
+          <!--Slide captions displayed here-->
+			    <div id="slidecaption"></div>
+
+        </div>
 	    </div>
     </div>
     @JqueryFromCDNWithFallBack("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", @Url.Content("~/js/libs/jquery-1.7.1.min.js"))
     @Html.Raw(Bundle.JavaScript()
                     .Add("~/js/libs/jquery.easing.1.3.js")
                     .Add("~/js/libs/supersized.3.2.7.js")
-                    .Add("~/js/libs/supersized.shutter.min.js")
+                    .Add("~/js/libs/supersized.shutter.js")
                     .Add("~/js/plugins.js")
                     .Add("~/js/script.js")
-                    .ForceRelease()
+                    //.ForceRelease()
                     .Render("~/js/script_#.js"))
     @RenderSection("ScriptSection", false)
     <!--[if lt IE 7 ]>

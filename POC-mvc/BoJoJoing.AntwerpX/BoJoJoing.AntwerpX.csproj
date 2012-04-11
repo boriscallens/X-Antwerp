@@ -123,6 +123,7 @@
     <Content Include="img\thumb-forward.png" />
     <Content Include="img\twitter.png" />
     <Content Include="img\twitterSmall.png" />
+    <Content Include="img\XA_infographic5.png" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
     <Content Include="js\libs\jquery.validate-vsdoc.js" />

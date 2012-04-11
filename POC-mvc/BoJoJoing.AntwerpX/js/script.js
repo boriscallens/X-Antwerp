@@ -30,9 +30,11 @@ jQuery(function ($) {
         thumb_links: 1, 		    // Individual thumb links for each slide
         thumbnail_navigation: 0, 	// Thumbnail navigation
         slides: [			        // Slideshow Images
-                { image: '/img/gebouw_1.png', thumb: '/img/gebouw_1_thumb.png'},
-                { image: '/img/gebouw_2.png', thumb: '/img/gebouw_2_thumb.png'},
-                { image: '/img/gebouw_3.png', thumb: '/img/gebouw_3_thumb.png'}
+                { image: '/img/gebouw_1.png', title: 'X-Antwerpen is een grootschalig stedelijk vernieuwingsproject met een gezonde mix van voornamelijk kantoren aangevuld met retail en ontspanningsmogelijkheden. Dat zorgt voor een aangename werkomgeving, en maakt het voor werknemers makkelijk om werk en privé op elkaar af te stemmen. De totale bovengrondse projectoppervlakte bedraagt 115.000m². De unieke locatie is een troef voor bedrijven die mikken op een toekom-stgerichte mobiliteit. De goede bereikbaarheid met het openbaar vervoer en de nabijheid van het station Antwerpen-Berchem spelen daarbij een belan-grijke rol. Maar er is meer: X-Antwerpen ligt bovendien naast de Antwerpse ring, dus ook de bereikbaarheid met de wagen is gegarandeerd.'},
+                { image: '/img/gebouw_2.png'},
+                { image: '/img/gebouw_3.png'},
+                { image: '/img/XA_infographic5.png', title: 'X-Antwerpen is een grootschalig stedelijk vernieuwingsproject met een gezonde mix van voornamelijk kantoren aangevuld met retail en ontspanningsmogelijkheden. Dat zorgt voor een aangename werkomgeving, en maakt het voor werknemers makkelijk om werk en privé op elkaar af te stemmen. De totale bovengrondse projectoppervlakte bedraagt 115.000m². De unieke locatie is een troef voor bedrijven die mikken op een toekom-stgerichte mobiliteit. De goede bereikbaarheid met het openbaar vervoer en de nabijheid van het station Antwerpen-Berchem spelen daarbij een belan-grijke rol. Maar er is meer: X-Antwerpen ligt bovendien naast de Antwerpse ring, dus ook de bereikbaarheid met de wagen is gegarandeerd.' }
+        
                 //{ image: 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-1.jpg', title: 'Image Credit: Maria Kazvan', thumb: 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url: 'http://www.nonsensesociety.com/2011/04/maria-kazvan/' },
 		],
 

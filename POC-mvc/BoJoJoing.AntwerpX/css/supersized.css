@@ -17,7 +17,6 @@
 }
 body
 {
-	background: #111;
 	height: 100%;
 }
 img
@@ -64,6 +63,7 @@ img
 	image-rendering: -moz-crisp-edges;
 }
 /*Speed*/
+
 #supersized.quality img
 {
 	-ms-interpolation-mode: bicubic;
@@ -82,7 +82,8 @@ img
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #111;
+	/*background: #111;*/
+	background: white;
 }
 #supersized a
 {
