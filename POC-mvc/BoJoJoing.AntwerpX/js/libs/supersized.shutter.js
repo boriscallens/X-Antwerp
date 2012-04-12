@@ -40,7 +40,7 @@
             // Thumbnail Tray Toggle
             $(vars.tray_button).toggle(function () {
                 //alert("down");
-                $("#controls-wrapper").animate({ bottom: 0}, 300);
+                $("#controls-wrapper").animate({ bottom: 0 }, 300);
                 //$("#controls-wrapper").stop().animate({ bottom: 0, avoidTransforms: true }, 300);
                 //alert("down");
                 //$(vars.thumb_tray).stop().animate({bottom : 0, avoidTransforms : true}, 300 );
@@ -112,13 +112,13 @@
             });
 
             // Full Opacity on Hover
-            if (jQuery.support.opacity) {
-                $(vars.prev_slide + ',' + vars.next_slide).mouseover(function () {
-                    $(this).stop().animate({ opacity: 1 }, 100);
-                }).mouseout(function () {
-                    $(this).stop().animate({ opacity: 0.6 }, 100);
-                });
-            }
+//            if (jQuery.support.opacity) {
+//                $(vars.prev_slide + ',' + vars.next_slide).mouseover(function () {
+//                    $(this).stop().animate({ opacity: 1 }, 100);
+//                }).mouseout(function () {
+//                    $(this).stop().animate({ opacity: 0.6 }, 100);
+//                });
+//            }
 
             if (api.options.thumbnail_navigation) {
                 // Next thumbnail clicked

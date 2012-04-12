@@ -71,21 +71,28 @@
 #prevslide, #nextslide
 {
 	position: absolute;
-	height: 43px;
-	width: 43px;
+	height: 87px;
+	width: 29px;
 	top: 50%;
 	margin-top: -21px;
-	opacity: 0.6;
 }
 #prevslide
 {
-	left: 10px;
 	background: url('../img/back.png');
 }
+#prevslide:hover
+{
+	background: url('../img/back_hover.png');
+}
+
 #nextslide
 {
-	right: 10px;
+	right: 0px;
 	background: url('../img/forward.png');
+}
+#nextslide:hover
+{
+	background: url('../img/forward_hover.png');
 }
 #prevslide:active, #nextslide:active
 {

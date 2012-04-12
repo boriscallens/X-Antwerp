@@ -130,7 +130,7 @@ ul#menu li a, #contactLink
 	color: White;
 	line-height: 35px;
 	font-weight:bold;
-	font-size: 9px;
+	font-size: 12px;
 	text-decoration: none;
 	text-transform: uppercase;
 	margin: 0 20px 0 0;
@@ -142,8 +142,8 @@ ul#menu li.current-nav a, ul#menu li:hover a
 
 #twitterIcon 
 {
-	padding: 13px 20px 13px 0;
-	height: 9px;
+	padding: 10px 20px 10px 0;
+	height: 15px;
 	float: right;
 	
 }
