@@ -30,7 +30,11 @@ jQuery(function ($) {
         thumb_links: 1, 		    // Individual thumb links for each slide
         thumbnail_navigation: 0, 	// Thumbnail navigation
         slides: [			        // Slideshow Images
-                { image: '/img/gebouw_1.png', title: 'X-Antwerpen is een grootschalig stedelijk vernieuwingsproject met een gezonde mix van voornamelijk kantoren aangevuld met retail en ontspanningsmogelijkheden. Dat zorgt voor een aangename werkomgeving, en maakt het voor werknemers makkelijk om werk en privé op elkaar af te stemmen. De totale bovengrondse projectoppervlakte bedraagt 115.000m². De unieke locatie is een troef voor bedrijven die mikken op een toekom-stgerichte mobiliteit. De goede bereikbaarheid met het openbaar vervoer en de nabijheid van het station Antwerpen-Berchem spelen daarbij een belan-grijke rol. Maar er is meer: X-Antwerpen ligt bovendien naast de Antwerpse ring, dus ook de bereikbaarheid met de wagen is gegarandeerd.'},
+                {image: '/img/gebouw_1.png', title:
+                    '<h3>X Antwerpen.</br>Berchem.</br>St&#233;phane Beel.</br>Zurenborg.</br></h3>' +
+                    '<p>X-Antwerpen is een grootschalig stedelijk vernieuwingsproject met een gezonde mix van voornamelijk kantoren aangevuld met retail en ontspanningsmogelijkheden. Dat zorgt voor een aangename werkomgeving, en maakt het voor werknemers makkelijk om werk en priv&#233; op elkaar af te stemmen. De totale bovengrondse projectoppervlakte bedraagt 115.000m&#178;. De unieke locatie is een troef voor bedrijven die mikken op een toekomstgerichte mobiliteit.</p>' +
+                    '<p>De goede bereikbaarheid met het openbaar vervoer en de nabijheid van het station Antwerpen-Berchem spelen daarbij een belan-grijke rol. Maar er is meer: X-Antwerpen ligt bovendien naast de Antwerpse ring, dus ook de bereikbaarheid met de wagen is gegarandeerd.</p>'
+                },
                 { image: '/img/gebouw_2.png'},
                 { image: '/img/gebouw_3.png'},
                 { image: '/img/XA_infographic5.png', title: 'X-Antwerpen is een grootschalig stedelijk vernieuwingsproject met een gezonde mix van voornamelijk kantoren aangevuld met retail en ontspanningsmogelijkheden. Dat zorgt voor een aangename werkomgeving, en maakt het voor werknemers makkelijk om werk en privé op elkaar af te stemmen. De totale bovengrondse projectoppervlakte bedraagt 115.000m². De unieke locatie is een troef voor bedrijven die mikken op een toekom-stgerichte mobiliteit. De goede bereikbaarheid met het openbaar vervoer en de nabijheid van het station Antwerpen-Berchem spelen daarbij een belan-grijke rol. Maar er is meer: X-Antwerpen ligt bovendien naast de Antwerpse ring, dus ook de bereikbaarheid met de wagen is gegarandeerd.' }
@@ -41,5 +45,12 @@ jQuery(function ($) {
         // Theme Options			   
         progress_bar: 0, 		    // Timer for each slide							
         mouse_scrub: 1
+    });
+});
+
+jQuery(function ($) {
+    $("#footer-toggle").click(function () {
+       /*'$("#footer").stop().animate({ 'background-color': 'blue' });*/
+        $("#footer").animate({height: 38}, "fast");
     });
 });

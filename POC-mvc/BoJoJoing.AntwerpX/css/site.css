@@ -322,17 +322,55 @@ div#title
 /* Sticky footer
 ----------------------------------------------------------*/
 html, body {height: 100%;}
-
 #wrap {min-height: 100%;}
 
-#main {overflow:auto;
-	padding-bottom: 42px;}  /* must be same height as the footer */
+#main 
+{
+	overflow:auto;
+	padding-bottom: 255px;  /* must be same height as the footer */
+}
 
-#footer {position: relative;
-	margin-top: -42px; /* negative value of footer height */
-	height: 42px;
-	clear:both;} 
-
+#footer 
+{
+	position: relative;
+	margin-top: -255px; /* negative value of footer height */
+	margin-left: auto;
+	margin-right: auto;
+	height: 255px;
+	width: 900px;
+	clear:both;
+	background-color: white;
+	padding: 13px 20px;
+}
+#footer-controls {
+	height: 25px;
+	border-bottom: 1px solid #CFB259;
+	margin-bottom: 13px;
+}
+#footer-toggle{
+	color: #CFB259;
+	text-decoration: none;
+	font-size: 12px;
+}
+.toggle-arrow, .toggle-lable  {
+	padding-right: 10px;
+	font-weight:900;
+}
+#slidecaption h3 {
+	font-weight: bold;
+	float: left;
+	font-size: 33px;
+	line-height: 45px;
+	width: 250px;
+	color: #404040;
+}
+#slidecaption p 
+{
+	font-size: 13px;
+	line-height: 17px;
+	color: #404040;
+	
+}
 /*Opera Fix*/
 body:before {
 	content:"";

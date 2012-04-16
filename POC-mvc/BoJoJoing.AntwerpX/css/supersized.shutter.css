@@ -42,12 +42,6 @@
 #slidecaption
 {
 	overflow: hidden;
-	float: left;
-	color: #FFF;
-	font: 400 14px "Helvetica Neue" , Helvetica, Arial, sans-serif;
-	text-shadow: #000 1px 1px 2px;
-	margin: 0 20px 0 0;
-	line-height: 42px;
 }
 
 #navigation
@@ -102,13 +96,31 @@
 {
 	cursor: pointer;
 }
-
-ul#slide-list
+ol#slide-list 
 {
-	padding: 0px 15px;
+	margin: 0px;
 	float: right;
-	/*position: absolute;
-	left: 50%;*/
+	counter-reset: item;
+    list-style-type: none;
+}
+ol#slide-list li 
+{
+	float: left;
+	width: 10px;
+	color: #404040;
+}
+ol#slide-list li:before {
+	content: counter(item) "   ";
+	counter-increment: item;
+}
+ol#slide-list li:before {
+	content: counter(item) "   ";
+	counter-increment: item;
+}
+
+ol#slide-list li.current-slide
+{
+	color: #CFB259;
 }
 ul#slide-list li
 {

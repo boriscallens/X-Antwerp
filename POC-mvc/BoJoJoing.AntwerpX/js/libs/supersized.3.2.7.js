@@ -91,9 +91,6 @@
 			}
 			
 			if (base.options.slide_links) $(vars.slide_list).html(markers);
-			if (base.options.thumb_links && vars.thumb_tray.length){
-				$(vars.thumb_tray).append('<ul id="'+vars.thumb_list.replace('#','')+'">'+thumbMarkers+'</ul>');
-			}
 			
 			$(base.el).append(slideSet);
 			
