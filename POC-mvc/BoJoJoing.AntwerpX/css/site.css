@@ -336,7 +336,7 @@ html, body {height: 100%;}
 	margin-top: -255px; /* negative value of footer height */
 	margin-left: auto;
 	margin-right: auto;
-	height: 255px;
+	height: 227px; /*total height - 2*margin
 	width: 900px;
 	clear:both;
 	background-color: white;
