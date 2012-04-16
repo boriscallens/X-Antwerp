@@ -137,6 +137,7 @@
     <Content Include="packages.config" />
     <Content Include="App_Code\LayoutHelpers.cshtml" />
     <Content Include="img\logo.png" />
+    <Content Include="Views\Home\Brochure.cshtml" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
     <None Include="_bin_deployableAssemblies\WebMatrix.WebData.xml" />
     <None Include="_bin_deployableAssemblies\WebMatrix.WebData.dll" />

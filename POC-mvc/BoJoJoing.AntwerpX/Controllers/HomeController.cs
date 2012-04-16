@@ -6,12 +6,14 @@ namespace BoJoJoing.AntwerpX.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "JVRE TEST!";
-
             return View();
         }
 
         public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Brochure()
         {
             return View();
         }
