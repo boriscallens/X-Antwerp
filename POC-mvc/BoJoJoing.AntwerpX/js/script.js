@@ -49,8 +49,28 @@ jQuery(function ($) {
 });
 
 jQuery(function ($) {
+    var $height = 229;
+    var $arrow = "&darr;";
+    var $label = "verberg";
     $("#footer-toggle").click(function () {
-       /*'$("#footer").stop().animate({ 'background-color': 'blue' });*/
-        $("#footer").animate({height: 38}, "fast");
+        toggle();
+        /*'$("#footer").stop().animate({ 'background-color': 'blue' });*/
+        $("#footer").animate({ height: $height }, "fast", toggled());
     });
+
+    function toggle() {
+        if ($arrow == "&uarr;") {
+            $arrow = "&darr;";
+            $label = "verberg";
+            $height = 229;
+        } else {
+            $arrow = "&uarr;";
+            $label = "meer info";
+            $height = 38;
+        }
+    }
+    function toggled() {
+        $('.toggle-arrow').html($arrow);
+        $('.toggle-label').html($label);
+    }
 });

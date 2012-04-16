@@ -33,45 +33,28 @@
                     .Render("~/js/mondernizrandrespond_#.js"))
 </head>
 <body>
-    <div id="wrap">
-        <div id="menucontainer">
-            <ul id="menu">
-                <li class="current-nav">@Html.ActionLink("X ANTWERPEN", "Index", "Home")</li>
-                <li>@Html.ActionLink("LOCATIE", "Location", "Home")</li>
-                <li>@Html.ActionLink("ONTWERP", "Design", "Home")</li>
-                <li>@Html.ActionLink("DUURZAAMHEID", "Durability", "Home")</li>
-                <li>@Html.ActionLink("BROCHURE", "Brochure", "Home")</li>
-            </ul>
-            <a href="https://twitter.com" target="blanck">
-                <img id="twitterIcon" alt="twitter bird icon" src="@Url.Content("~/img/twitterSmall.png")"/>
-            </a>
-            <a id="contactLink" href="mailto:contact@xantwerpen.be">CONTACT</a>
-        </div>
-        @RenderBody()
+    <div id="menucontainer">
+        <ul id="menu">
+            <li class="current-nav">@Html.ActionLink("X ANTWERPEN", "Index", "Home")</li>
+            <li>@Html.ActionLink("LOCATIE", "Location", "Home")</li>
+            <li>@Html.ActionLink("ONTWERP", "Design", "Home")</li>
+            <li>@Html.ActionLink("DUURZAAMHEID", "Durability", "Home")</li>
+            <li>@Html.ActionLink("BROCHURE", "Brochure", "Home")</li>
+        </ul>
+        <a href="https://twitter.com" target="blanck">
+            <img id="twitterIcon" alt="twitter bird icon" src="@Url.Content("~/img/twitterSmall.png")"/>
+        </a>
+        <a id="contactLink" href="mailto:contact@xantwerpen.be">CONTACT</a>
     </div>
+    @RenderBody()
     <div id="footer">
-        <div id="footer-controls">
-            <a href="#" id="footer-toggle"><span class="toggle-arrow">&darr;</span><span class="toggle-lable">verberg</span></a>
-            <ol id="slide-list"></ol>
-        </div>
-        <div id="slidecaption"></div>
-        @* <!--Control Bar-->
-        <div id="controls-wrapper" class="load-item">
-			
-                <!--Slide counter-->
-               <div id="slidecounter">
-				    <span class="slidenumber"></span> / <span class="totalslides"></span>
-			    </div>*@
-			
-        @*<!--Thumb Tray button-->
-                <a id="tray-button"><img id="tray-arrow" src="img/button-tray-up.png" alt="tray button"/></a>
-			
-                <!--Navigation-->
-                <ul id="slide-list"></ul>
-			
-                <!--Slide captions displayed here-->
-                <div id="slidecaption"></div>
-        </div>*@
+      <div id="footer-center">
+          <div id="footer-controls">
+              <a href="#" id="footer-toggle"><span class="toggle-arrow">&darr;</span><span class="toggle-label">verberg</span></a>
+              <ol id="slide-list"></ol>
+          </div>
+          <div id="slidecaption"></div>
+      </div>
     </div>
     @JqueryFromCDNWithFallBack("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", @Url.Content("~/js/libs/jquery-1.7.1.min.js"))
     @Html.Raw(Bundle.JavaScript()

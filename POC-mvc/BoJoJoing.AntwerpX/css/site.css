@@ -319,26 +319,22 @@ div#title
 	width: 6em;
 }
 
-/* Sticky footer
+/* Footer
 ----------------------------------------------------------*/
-html, body {height: 100%;}
-#wrap {min-height: 100%;}
-
-#main 
-{
-	overflow:auto;
-	padding-bottom: 255px;  /* must be same height as the footer */
+#footer {
+	position: absolute;
+	bottom: 0;
+	height: 255px;
+	width: 100%;
+	display: block;
+	overflow: hidden;
 }
-
-#footer 
+#footer-center 
 {
-	position: relative;
-	margin-top: -255px; /* negative value of footer height */
 	margin-left: auto;
 	margin-right: auto;
-	height: 227px; /*total height - 2*margin
+	height: 229px; /*total height - 2*margin*/
 	width: 900px;
-	clear:both;
 	background-color: white;
 	padding: 13px 20px;
 }
@@ -351,8 +347,11 @@ html, body {height: 100%;}
 	color: #CFB259;
 	text-decoration: none;
 	font-size: 12px;
+	display: block;
+	width: 800px;
+	float: left;
 }
-.toggle-arrow, .toggle-lable  {
+.toggle-arrow, .toggle-label  {
 	padding-right: 10px;
 	font-weight:900;
 }
@@ -360,22 +359,15 @@ html, body {height: 100%;}
 	font-weight: bold;
 	float: left;
 	font-size: 33px;
-	line-height: 45px;
+	line-height: 33px;
 	width: 250px;
 	color: #404040;
+	margin-top: -3px;
 }
-#slidecaption p 
+#slidecaption p
 {
 	font-size: 13px;
 	line-height: 17px;
 	color: #404040;
-	
-}
-/*Opera Fix*/
-body:before {
-	content:"";
-	height:100%;
-	float:left;
-	width:0;
-	margin-top:-32767px;/
+	margin-left: 250px;
 }
