@@ -54,8 +54,10 @@ jQuery(function ($) {
     var $label = "verberg";
     $("#footer-toggle").click(function () {
         toggle();
-        /*'$("#footer").stop().animate({ 'background-color': 'blue' });*/
-        $("#footer").animate({ height: $height }, "fast", toggled());
+        $("#footer").stop().animate({ height: $height }, "fast", toggled());
+        /* remove focus from link so no dotted border appears */
+        this.blur(); 
+        return false;
     });
 
     function toggle() {
