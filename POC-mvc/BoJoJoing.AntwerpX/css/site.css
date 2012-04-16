@@ -150,6 +150,13 @@ ul#menu li.current-nav a, ul#menu li:hover a
 #contactLink {
 	float: right;
 }
+#logo {
+	position: absolute;
+	left: 50%;
+	top: 70px;
+	display: block;
+	padding-left: 485px;
+}
 
 /* FORM LAYOUT ELEMENTS   
 ----------------------------------------------------------*/

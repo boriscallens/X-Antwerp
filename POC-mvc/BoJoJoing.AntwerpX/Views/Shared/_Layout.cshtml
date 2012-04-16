@@ -4,18 +4,14 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8" />
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame. Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>@Page.Title</title>
   <meta name="description" content="" />
   <meta name="author" content="BoJoJoing" />
-  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   @Html.Raw(Bundle.Css()
                     .Add("~/css/normalize.css")
@@ -23,7 +19,7 @@
                     .Add("~/css/media.css")
                     .Add("~/css/supersized.css")
                     .Add("~/css/supersized.shutter.css")
-      //.ForceRelease() // Test it out with minification
+                    //.ForceRelease() // Test it out with minification
                     .Render("~/css/style_#.css"))
   @RenderSection("HeadContent", false)
   @Html.Raw(Bundle.JavaScript()
@@ -32,59 +28,57 @@
                     .ForceRelease()
                     .Render("~/js/mondernizrandrespond_#.js"))
 </head>
-<body>
-  <div id="menucontainer">
-    <ul id="menu">
-      <li class="current-nav">@Html.ActionLink("X ANTWERPEN", "Index", "Home")</li>
-      <li>@Html.ActionLink("LOCATIE", "Location", "Home")</li>
-      <li>@Html.ActionLink("ONTWERP", "Design", "Home")</li>
-      <li>@Html.ActionLink("DUURZAAMHEID", "Durability", "Home")</li>
-      <li>@Html.ActionLink("BROCHURE", "Brochure", "Home")</li>
-    </ul>
-    <a href="https://twitter.com" target="blanck">
-      <img id="twitterIcon" alt="twitter bird icon" src="@Url.Content("~/img/twitterSmall.png")"/>
-    </a><a id="contactLink" href="mailto:contact@xantwerpen.be">CONTACT</a>
-  </div>
-  <!--Arrow Navigation-->
+  <body>
+    <div id="menucontainer">
+        <ul id="menu">
+            <li class="current-nav">@Html.ActionLink("X ANTWERPEN", "Index", "Home")</li>
+            <li>@Html.ActionLink("LOCATIE", "Location", "Home")</li>
+            <li>@Html.ActionLink("ONTWERP", "Design", "Home")</li>
+            <li>@Html.ActionLink("DUURZAAMHEID", "Durability", "Home")</li>
+            <li>@Html.ActionLink("BROCHURE", "Brochure", "Home")</li>
+        </ul>
+        <a href="https://twitter.com" target="_blank"><img id="twitterIcon" alt="twitter bird icon" src="@Url.Content("~/img/twitterSmall.png")"/></a>
+        <a id="contactLink" href="mailto:contact@xantwerpen.be">CONTACT</a>
+    </div>
+    <img id="logo" src="@Url.Content("img/logo.png")" alt="X Antwerp Logo" width="89" height="87"/>
+    <!--Arrow Navigation-->
     <a id="prevslide" class="load-item"></a>
     <a id="nextslide" class="load-item"></a>
-  @RenderBody()
-  <div id="footer">
-    <div id="footer-center">
-      <div id="footer-controls">
-        <a href="#" id="footer-toggle"><span class="toggle-arrow">&darr;</span><span class="toggle-label">verberg</span></a>
-        <ol id="slide-list">
-        </ol>
-      </div>
-      <div id="slidecaption">
+    @RenderBody()
+    <div id="footer">
+      <div id="footer-center">
+        <div id="footer-controls">
+          <a href="#" id="footer-toggle"><span class="toggle-arrow">&darr;</span><span class="toggle-label">verberg</span></a>
+          <ol id="slide-list"></ol>
+        </div>
+        <div id="slidecaption"></div>
       </div>
     </div>
-  </div>
-  @JqueryFromCDNWithFallBack("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", @Url.Content("~/js/libs/jquery-1.7.1.min.js"))
-  @Html.Raw(Bundle.JavaScript()
+    @JqueryFromCDNWithFallBack("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", @Url.Content("~/js/libs/jquery-1.7.1.min.js"))
+    @Html.Raw(Bundle.JavaScript()
                     .Add("~/js/libs/jquery.easing.1.3.js")
                     .Add("~/js/libs/supersized.3.2.7.js")
                     .Add("~/js/libs/supersized.shutter.js")
                     .Add("~/js/plugins.js")
                     .Add("~/js/script.js")
-      //.ForceRelease()
+                    //.ForceRelease()
                     .Render("~/js/script_#.js"))
-  @RenderSection("ScriptSection", false)
-  <!--[if lt IE 7 ]>
-        <script src="@Url.Content("~/js/libs/dd_belatedpng.js")"></script>
-        <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-    <![endif]-->
-  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
-  <!-- Commented out until you deploy -->
-  @*<script>
-      var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-      (function (d, t) {
-        var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.async = 1;
-        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s)
-      } (document, 'script'));
-  </script>*@
-</body>
+    @RenderSection("ScriptSection", false)
+    <!--[if lt IE 7 ]>
+          <script src="@Url.Content("~/js/libs/dd_belatedpng.js")"></script>
+          <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+      <![endif]-->
+    <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+    <!-- Commented out until you deploy -->
+    @*<script>
+        var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+        (function (d, t) {
+          var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.async = 1;
+          g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g, s)
+        } (document, 'script'));
+    </script>*@
+  </body>
 </html>
 @helper JqueryFromCDNWithFallBack(string cndUrl, string localUrl)
   {
