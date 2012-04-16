@@ -6,7 +6,7 @@ namespace BoJoJoing.AntwerpX.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "MotherEffin HTML5 Boilerplate MVC!";
+            ViewBag.Message = "JVRE TEST!";
 
             return View();
         }
