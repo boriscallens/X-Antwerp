@@ -342,7 +342,7 @@ div#title
 {
     position: absolute;
     bottom: 0;
-    height: 255px;
+    height: 265px;
     width: 100%;
     display: block;
     overflow: hidden;
@@ -351,7 +351,7 @@ div#title
 {
     margin-left: auto;
     margin-right: auto;
-    height: 229px; /*total height - 2*margin*/
+    height: 239px; /*total height - 2*margin*/
     width: 900px;
     background-color: white;
     padding: 13px 20px;
