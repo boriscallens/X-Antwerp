@@ -52,7 +52,7 @@ jQuery(function ($) {
     var $height = 229;
     var $arrow = "&darr;";
     var $label = "verberg";
-    $("#footer-toggle").click(function () {
+    $("#footer-toggle,#footer-toggle-layover").click(function () {
         toggle();
         $("#footer").stop().animate({ height: $height }, "fast", toggled());
         /* remove focus from link so no dotted border appears */
