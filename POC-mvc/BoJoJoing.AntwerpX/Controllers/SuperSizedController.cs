@@ -21,16 +21,32 @@ namespace BoJoJoing.AntwerpX.Controllers
             List<Slide> slides = new List<Slide>();
             foreach (var file in filesInDeck)
             {
-                var relativeUrl = Url.Content(string.Format("decks/{0}/{1}", deck, file));
+                var relativeUrl = Url.Content(string.Format("~/decks/{0}/{1}", deck, file));
                 var caption = GetCaption(deck, file);
-                slides.Add(new Slide(relativeUrl, caption));
+                var quoteImage = "";
+                var quoteText = "";
+                if (deck == "quotes")
+                {
+                    quoteImage = "";//relativeUrl;  // quote image on top of background image for quotes
+                    quoteText = GetQuoteText(file);
+                    relativeUrl = Url.Content(string.Format("~/img/quoteImage.jpg")); // all backgrounds the same image
+                }
+
+                slides.Add(new Slide(relativeUrl, caption, quoteImage, quoteText));
             }
             return slides.ToArray();
         }
 
+        private string GetQuoteText(string file)
+        {
+            return ControllerContext.RenderPartialToString("quoteTexts/" + Path.GetFileNameWithoutExtension(file),
+                                                           "quotes");
+        }
+
         private string GetCaption(string deck, string file)
         {
-            ControllerContext.RenderPartialToString()
+            // TODO : hoe moet ik da hier juist doorgeven zodat die gaat zoeken in /XAntwerp/Gebouw100
+            return ControllerContext.RenderPartialToString(deck + "/" + Path.GetFileNameWithoutExtension(file), deck);
         }
 
         private static dynamic GetSuperSizedOptions(Slide[] slides)
@@ -50,7 +66,7 @@ namespace BoJoJoing.AntwerpX.Controllers
                 new_window = 1, 		        // Image links open in new window/tab
                 pause_hover = 0, 		    // Pause slideshow on hover
                 keyboard_nav = 1, 		    // Keyboard navigation on/off
-                performance = 2, 		    // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+                performance = 3, 		    // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
                 image_protect = 1, 		    // Disables image dragging and right click with Javascript
 
                 // Size & Position						   
@@ -80,11 +96,15 @@ namespace BoJoJoing.AntwerpX.Controllers
     {
         public string title { get; set; }
         public string image { get; set; }
+        public string quoteImage { get; set; }
+        public string quoteText { get; set; }
 
-        public Slide(string imgUrl, string caption)
+        public Slide(string imgUrl, string caption, string overlayimage, string text)
         {
             image = imgUrl;
             title = caption;
+            quoteImage = overlayimage;
+            quoteText = text;
         }
     }
 

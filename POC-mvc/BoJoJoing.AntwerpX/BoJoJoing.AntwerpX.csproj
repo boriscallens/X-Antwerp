@@ -82,8 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SuperSizedController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HTMLHelpers.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="apple-touch-icon-114x114-precomposed.png" />
@@ -93,39 +97,37 @@
     <Content Include="css\media.css" />
     <Content Include="css\site.css" />
     <Content Include="css\supersized.css" />
-    <Content Include="demo\hack.css" />
-    <Content Include="demo\hack2.css" />
-    <Content Include="demo\internet_explorer.png" />
-    <Content Include="demo\tests.html" />
-    <Content Include="demo\test_tubes.png" />
+    <Content Include="decks\contact\contact.jpg" />
+    <Content Include="decks\location\location_1.jpg" />
+    <Content Include="decks\location\location_2.jpg" />
+    <Content Include="decks\location\location_3.jpg" />
+    <Content Include="decks\ontwerp\ontwerp_1.jpg" />
+    <Content Include="decks\ontwerp\ontwerp_2.jpg" />
+    <Content Include="decks\ontwerp\ontwerp_3.jpg" />
+    <Content Include="decks\ontwerp\ontwerp_4.jpg" />
+    <Content Include="decks\ontwerp\ontwerp_5.jpg" />
+    <Content Include="decks\quotes\quote_1.png" />
+    <Content Include="decks\quotes\quote_2.png" />
+    <Content Include="decks\quotes\quote_3.png" />
+    <Content Include="decks\quotes\quote_4.png" />
+    <Content Include="decks\quotes\quote_5.png" />
+    <Content Include="decks\xantwerp\xantwerp_1.jpg" />
+    <Content Include="decks\xantwerp\xantwerp_2.jpg" />
+    <Content Include="decks\xantwerp\xantwerp_3.jpg" />
     <Content Include="GenericErrorPage.html" />
     <Content Include="humans.txt" />
     <Content Include="img\back.png" />
     <Content Include="img\back_hover.png" />
     <Content Include="img\bg-black.png" />
     <Content Include="img\bg-hover.png" />
-    <Content Include="img\brochure.png" />
-    <Content Include="img\button-tray-down.png" />
-    <Content Include="img\button-tray-up.png" />
+    <Content Include="img\quoteImage.jpg" />
     <Content Include="img\forward.png" />
     <Content Include="img\forward_hover.png" />
-    <Content Include="img\gebouw_1.png" />
-    <Content Include="img\gebouw_2.png" />
-    <Content Include="img\gebouw_3.png" />
-    <Content Include="img\locatie.png" />
     <Content Include="img\nav-bg.png" />
     <Content Include="img\nav-dot.png" />
-    <Content Include="img\pause.png" />
-    <Content Include="img\play.png" />
     <Content Include="img\progress-back.png" />
     <Content Include="img\progress-bar.png" />
     <Content Include="img\progress.gif" />
-    <Content Include="img\supersized-logo.png" />
-    <Content Include="img\thumb-back.png" />
-    <Content Include="img\thumb-forward.png" />
-    <Content Include="img\twitter.png" />
-    <Content Include="img\twitterSmall.png" />
-    <Content Include="img\XA_infographic5.png" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
     <Content Include="js\libs\jquery.validate-vsdoc.js" />
@@ -137,7 +139,32 @@
     <Content Include="packages.config" />
     <Content Include="App_Code\LayoutHelpers.cshtml" />
     <Content Include="img\logo.png" />
-    <Content Include="Views\Home\Brochure.cshtml" />
+    <Content Include="Views\SuperSized\xantwerp\xantwerp_3.cshtml" />
+    <Content Include="Views\SuperSized\xantwerp\xantwerp_2.cshtml" />
+    <Content Include="Views\SuperSized\xantwerp\xantwerp_1.cshtml" />
+    <Content Include="Views\Home\Location.cshtml" />
+    <Content Include="Views\SuperSized\location\location_3.cshtml" />
+    <Content Include="Views\SuperSized\location\location_1.cshtml" />
+    <Content Include="Views\SuperSized\location\location_2.cshtml" />
+    <Content Include="Views\SuperSized\ontwerp\ontwerp_2.cshtml" />
+    <Content Include="Views\SuperSized\ontwerp\ontwerp_1.cshtml" />
+    <Content Include="Views\SuperSized\ontwerp\ontwerp_3.cshtml" />
+    <Content Include="Views\SuperSized\ontwerp\ontwerp_4.cshtml" />
+    <Content Include="Views\SuperSized\ontwerp\ontwerp_5.cshtml" />
+    <Content Include="Views\Home\Design.cshtml" />
+    <Content Include="Views\Home\Quotes.cshtml" />
+    <Content Include="Views\SuperSized\quotes\quote_2.cshtml" />
+    <Content Include="Views\SuperSized\quotes\quote_1.cshtml" />
+    <Content Include="Views\SuperSized\quotes\quote_5.cshtml" />
+    <Content Include="Views\SuperSized\quotes\quote_4.cshtml" />
+    <Content Include="Views\SuperSized\quotes\quote_3.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\SuperSized\contact\contact.cshtml" />
+    <Content Include="Views\SuperSized\quoteTexts\quote_1.cshtml" />
+    <Content Include="Views\SuperSized\quoteTexts\quote_5.cshtml" />
+    <Content Include="Views\SuperSized\quoteTexts\quote_2.cshtml" />
+    <Content Include="Views\SuperSized\quoteTexts\quote_3.cshtml" />
+    <Content Include="Views\SuperSized\quoteTexts\quote_4.cshtml" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
     <None Include="_bin_deployableAssemblies\WebMatrix.WebData.xml" />
     <None Include="_bin_deployableAssemblies\WebMatrix.WebData.dll" />
@@ -157,10 +184,6 @@
     <None Include="_bin_deployableAssemblies\NuGet.Core.dll" />
     <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.xml" />
     <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.dll" />
-    <None Include="test\index.html" />
-    <None Include="test\qunit\qunit.css" />
-    <None Include="test\qunit\qunit.js" />
-    <None Include="test\tests.js" />
     <Content Include="js\libs\modernizr-2.5.3.js" />
     <Content Include="js\libs\jquery-1.7.1-vsdoc.js" />
     <Content Include="js\libs\jquery-1.7.1.js" />
@@ -168,7 +191,6 @@
     <Content Include="js\libs\jquery.easing.1.3.js" />
     <Content Include="css\supersized.shutter.css" />
     <Content Include="js\libs\supersized.shutter.js" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -176,7 +198,6 @@
     <Content Include="apple-touch-icon.png" />
     <Content Include="crossdomain.xml" />
     <Content Include="css\normalize.css" />
-    <Content Include="demo\elements.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="js\libs\dd_belatedpng.js" />

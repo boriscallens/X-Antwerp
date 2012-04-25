@@ -10,23 +10,30 @@ body
     background-color: white;
 }
 
+::selection {
+	background: #cfb259 ; /* Safari */
+	}
+::-moz-selection {
+	background: #cfb259; /* Firefox */
+}
+
 a:link
 {
-    color: #034af3;
+    color: #CFB259;
     text-decoration: underline;
 }
 a:visited
 {
-    color: #505abc;
+    color: #CFB259;
 }
 a:hover
 {
-    color: #1d60ff;
+    color: #CFB259;
     text-decoration: none;
 }
 a:active
 {
-    color: #12eb87;
+    color: #CFB259;
 }
 
 p, ul
@@ -153,10 +160,9 @@ ul#menu li.current-nav a, ul#menu li:hover a
 #logo
 {
     position: absolute;
-    left: 50%;
+    right: 7%;
     top: 70px;
-    display: block;
-    padding-left: 485px;
+    display: block; /*padding-left: 485px;*/
 }
 
 /* FORM LAYOUT ELEMENTS   
@@ -229,7 +235,7 @@ table th
 
 #menucontainer
 {
-    width: 900px;
+    width: 940px;
     height: 35px;
     margin-left: auto;
     margin-right: auto;
@@ -327,6 +333,46 @@ div#title
     width: 6em;
 }
 
+/* quotes */
+#quoteimagecontainer
+{
+    z-index: 0;
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px; /*set to a negative number 1/2 of your height*/
+    margin-left: -475px; /*set to a negative number 1/2 of your width*/
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    width: 940px;
+}
+#quoteimagecontainer p
+{
+    margin-top: .5em;
+    margin-bottom: .5em;
+    line-height: 1.35em;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: justify;
+
+}
+#quoteimagecontainer .signature
+{
+    font-style: italic;
+    font-size: 18px;
+}
+#quoteimage
+{
+    display: none;
+    border-style: none;
+    border: 0;
+    outline: none;
+}
 /* Footer
 ----------------------------------------------------------*/
 #footer-toggle-layover
@@ -374,13 +420,13 @@ div#title
 .toggle-arrow, .toggle-label
 {
     padding-right: 10px;
-    font-weight: 900;
+    font-weight: 500;
 }
 #slidecaption h3
 {
     font-weight: bold;
     float: left;
-    font-size: 33px;
+    font-size: 28px;
     line-height: 33px;
     width: 250px;
     color: #404040;
@@ -392,4 +438,12 @@ div#title
     line-height: 17px;
     color: #404040;
     margin-left: 250px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+#slidecaption div
+{
+    font-size: 13px;
+    line-height: 17px;
+    color: #404040;
 }

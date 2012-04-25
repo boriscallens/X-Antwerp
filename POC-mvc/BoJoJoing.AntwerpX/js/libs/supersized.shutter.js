@@ -1,13 +1,13 @@
 /*
 
-	Supersized - Fullscreen Slideshow jQuery Plugin
-	Version : 3.2.7
-	Theme 	: Shutter 1.1
+Supersized - Fullscreen Slideshow jQuery Plugin
+Version : 3.2.7
+Theme 	: Shutter 1.1
 	
-	Site	: www.buildinternet.com/project/supersized
-	Author	: Sam Dunn
-	Company : One Mighty Roar (www.onemightyroar.com)
-	License : MIT License / GPL License
+Site	: www.buildinternet.com/project/supersized
+Author	: Sam Dunn
+Company : One Mighty Roar (www.onemightyroar.com)
+License : MIT License / GPL License
 
 */
 
@@ -112,13 +112,13 @@
             });
 
             // Full Opacity on Hover
-//            if (jQuery.support.opacity) {
-//                $(vars.prev_slide + ',' + vars.next_slide).mouseover(function () {
-//                    $(this).stop().animate({ opacity: 1 }, 100);
-//                }).mouseout(function () {
-//                    $(this).stop().animate({ opacity: 0.6 }, 100);
-//                });
-//            }
+            //            if (jQuery.support.opacity) {
+            //                $(vars.prev_slide + ',' + vars.next_slide).mouseover(function () {
+            //                    $(this).stop().animate({ opacity: 1 }, 100);
+            //                }).mouseout(function () {
+            //                    $(this).stop().animate({ opacity: 0.6 }, 100);
+            //                });
+            //            }
 
             if (api.options.thumbnail_navigation) {
                 // Next thumbnail clicked
@@ -237,6 +237,37 @@
             if ($(vars.slide_caption).length) {
                 (api.getField('title')) ? $(vars.slide_caption).html(api.getField('title')) : $(vars.slide_caption).html('');
             }
+
+
+
+            // JVRE 
+
+            if (api.getField('title').length == 0)
+                SetContentPanel(true);
+            else
+                SetContentPanel(false);
+
+            if (api.getField('quoteText').length != 0) {
+                $('#quoteimagecontainer').html(api.getField('quoteText'));
+                $("#quoteimagecontainer").css("display", "block");
+            }
+             else {
+                 $('#quoteimagecontainer').html('');
+                 $("#quoteimagecontainer").css("display", "none");
+            }
+
+            if (api.getField('quoteImage').length != 0) {
+                $("#quoteimage").attr("src", api.getField('quoteImage'));
+                $("#quoteimage").css("display", "block");
+
+            } else {
+                $("#quoteimage").attr("src", "");
+                $("#quoteimage").css("display", "none");
+            }
+
+            // END JVRE
+
+
             // Update slide number
             if (vars.slide_current.length) {
                 $(vars.slide_current).html(vars.current_slide + 1);

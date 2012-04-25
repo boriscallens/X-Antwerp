@@ -1,4 +1,5 @@
-﻿@using SquishIt.Framework
+﻿@using BoJoJoing.AntwerpX.Helpers
+@using SquishIt.Framework
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -31,17 +32,23 @@
                     .Render("~/js/mondernizrandrespond_#.js"))
 </head>
 <body>
+    <script type="text/javascript">
+        // TODO : hoe kan ik da recht uit viewbag lezen in js?
+        var deckname = '@ViewBag.DeckName';
+    </script>
     <div id="menucontainer">
         <ul id="menu">
-            <li class="current-nav">@Html.ActionLink("X ANTWERPEN", "Index", "Home")</li>
-            <li>@Html.ActionLink("LOCATIE", "Location", "Home")</li>
-            <li>@Html.ActionLink("ONTWERP", "Design", "Home")</li>
-            <li>@Html.ActionLink("DUURZAAMHEID", "Durability", "Home")</li>
-            <li>@Html.ActionLink("BROCHURE", "Brochure", "Home")</li>
+            @Html.MenuItem("X-ANTWERPEN", "Index", "Home")
+            @Html.MenuItem("LOCATIE", "Location", "Home")
+            @Html.MenuItem("ONTWERP", "Design", "Home")
+            @Html.MenuItem("QUOTES", "Quotes", "Home")
         </ul>
-        <a id="contactLink" href="mailto:contact@xantwerpen.be">CONTACT</a>
+        <a id="contactLink" href="@Url.Action("Contact", "Home")">CONTACT</a>
     </div>
-    <img id="logo" src="@Url.Content("~/img/logo.png")" alt="X Antwerp Logo" width="89" height="87"/>
+    <div id="quoteimagecontainer">
+        <!--<img id="quoteimage" alt="" width="950" height="350" />--></div>
+    <a href="@Url.Content("~")">
+        <img id="logo" src="@Url.Content("~/img/logo.png")" alt="X Antwerp Logo" width="89" height="87"/></a>
     <!--Arrow Navigation-->
     <a id="prevslide" class="load-item"></a><a id="nextslide" class="load-item"></a>
     @RenderBody()
@@ -66,13 +73,13 @@
                     .Add("~/js/libs/supersized.shutter.js")
                     .Add("~/js/plugins.js")
                     .Add("~/js/script.js")
-            .ForceRelease()
+                    .ForceRelease()
                     .Render("~/js/script_#.js"))
     @RenderSection("ScriptSection", false)
     <!--[if lt IE 7 ]>
-          <script src="@Url.Content("~/js/libs/dd_belatedpng.js")"></script>
-          <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-      <![endif]-->
+        <script src="@Url.Content("~/js/libs/dd_belatedpng.js")"></script>
+        <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]-->
     <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
     <!-- Commented out until you deploy -->
     @*<script>

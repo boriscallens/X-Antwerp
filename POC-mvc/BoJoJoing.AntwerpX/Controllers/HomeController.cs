@@ -6,17 +6,37 @@ namespace BoJoJoing.AntwerpX.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.DeckName = "xantwerp";
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Location()
         {
-            return View();
-        }
-        public ActionResult Brochure()
-        {
+            ViewBag.DeckName = "location";
             return View();
         }
 
+        public ActionResult Design()
+        {
+            ViewBag.DeckName = "ontwerp";
+            return View();
+        }
+
+        public ActionResult Quotes()
+        {
+            ViewBag.DeckName = "quotes";
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.DeckName = "contact";
+            return View();
+        }
+
+        public ActionResult UnderConstruction()
+        {
+            return null;
+        }
     }
 }
