@@ -256,15 +256,6 @@ License : MIT License / GPL License
                  $("#quotecontainer").css("display", "none");
             }
 
-            if (api.getField('quoteImage').length != 0) {
-                $("#quoteimage").attr("src", api.getField('quoteImage'));
-                $("#quoteimage").css("display", "block");
-
-            } else {
-                $("#quoteimage").attr("src", "");
-                $("#quoteimage").css("display", "none");
-            }
-
             // END JVRE
 
 

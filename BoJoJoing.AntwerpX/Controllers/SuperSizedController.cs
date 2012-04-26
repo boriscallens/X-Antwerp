@@ -23,16 +23,14 @@ namespace BoJoJoing.AntwerpX.Controllers
             {
                 var relativeUrl = Url.Content(string.Format("~/decks/{0}/{1}", deck, file));
                 var caption = GetCaption(deck, file);
-                var quoteImage = "";
                 var quoteText = "";
                 if (deck == "quotes")
                 {
-                    quoteImage = "";//relativeUrl;  // quote image on top of background image for quotes
                     quoteText = GetQuoteText(file);
                     relativeUrl = Url.Content(string.Format("~/img/quoteImage.jpg")); // all backgrounds the same image
                 }
 
-                slides.Add(new Slide(relativeUrl, caption, quoteImage, quoteText));
+                slides.Add(new Slide(relativeUrl, caption, quoteText));
             }
             return slides.ToArray();
         }
@@ -96,14 +94,12 @@ namespace BoJoJoing.AntwerpX.Controllers
     {
         public string title { get; set; }
         public string image { get; set; }
-        public string quoteImage { get; set; }
         public string quoteText { get; set; }
 
-        public Slide(string imgUrl, string caption, string overlayimage, string text)
+        public Slide(string imgUrl, string caption,  string text)
         {
             image = imgUrl;
             title = caption;
-            quoteImage = overlayimage;
             quoteText = text;
         }
     }
