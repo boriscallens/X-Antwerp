@@ -7,7 +7,7 @@ jQuery(function ($) {
     var $height = 265;
     var $arrow = "&darr;";
     var $label = "verberg";
-    $("#footer-toggle,#footer-toggle-layover,#quoteimagecontainer").click(function () {
+    $("#footer-toggle,#footer-toggle-layover,#quotecontainer").click(function () {
         toggle();
         $("#footer").stop().animate({ height: $height }, "fast", toggled());
         /* remove focus from link so no dotted border appears */

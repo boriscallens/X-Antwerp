@@ -248,12 +248,12 @@ License : MIT License / GPL License
                 SetContentPanel(false);
 
             if (api.getField('quoteText').length != 0) {
-                $('#quoteimagecontainer').html(api.getField('quoteText'));
-                $("#quoteimagecontainer").css("display", "block");
+                $('#quotecontainer').html(api.getField('quoteText'));
+                $("#quotecontainer").css("display", "block");
             }
              else {
-                 $('#quoteimagecontainer').html('');
-                 $("#quoteimagecontainer").css("display", "none");
+                 $('#quotecontainer').html('');
+                 $("#quotecontainer").css("display", "none");
             }
 
             if (api.getField('quoteImage').length != 0) {

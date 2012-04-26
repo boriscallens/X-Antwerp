@@ -28,7 +28,8 @@
     @Html.Raw(Bundle.JavaScript()
                     .Add("~/js/libs/modernizr-2.5.3.js")
                     .Add("~/js/libs/respond.min.js")
-                    .ForceRelease()
+                    .Add("~/js/googleanalytics.js")
+            //.ForceRelease()
                     .Render("~/js/mondernizrandrespond_#.js"))
 </head>
 <body>
@@ -45,8 +46,7 @@
         </ul>
         <a id="contactLink" href="@Url.Action("Contact", "Home")">CONTACT</a>
     </div>
-    <div id="quoteimagecontainer">
-        <!--<img id="quoteimage" alt="" width="950" height="350" />--></div>
+    <div id="quotecontainer"></div>
     <a href="@Url.Content("~")">
         <img id="logo" src="@Url.Content("~/img/logo.png")" alt="X Antwerp Logo" width="89" height="87"/></a>
     <!--Arrow Navigation-->

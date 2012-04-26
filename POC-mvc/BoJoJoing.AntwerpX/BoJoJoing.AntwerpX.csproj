@@ -90,10 +90,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="apple-touch-icon-114x114-precomposed.png" />
-    <Content Include="apple-touch-icon-57x57-precomposed.png" />
-    <Content Include="apple-touch-icon-72x72-precomposed.png" />
-    <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="css\media.css" />
     <Content Include="css\site.css" />
     <Content Include="css\supersized.css" />
@@ -128,6 +124,7 @@
     <Content Include="img\progress-back.png" />
     <Content Include="img\progress-bar.png" />
     <Content Include="img\progress.gif" />
+    <Content Include="js\googleanalytics.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
     <Content Include="js\libs\jquery.validate-vsdoc.js" />
@@ -195,7 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
-    <Content Include="apple-touch-icon.png" />
     <Content Include="crossdomain.xml" />
     <Content Include="css\normalize.css" />
     <Content Include="favicon.ico" />

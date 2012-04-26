@@ -334,7 +334,7 @@ div#title
 }
 
 /* quotes */
-#quoteimagecontainer
+#quotecontainer
 {
     z-index: 0;
     display: table-cell;
@@ -345,13 +345,13 @@ div#title
     top: 50%;
     left: 50%;
     margin-top: -175px; /*set to a negative number 1/2 of your height*/
-    margin-left: -475px; /*set to a negative number 1/2 of your width*/
+    margin-left: -480px; /*set to a negative number 1/2 of your width*/
     padding-left: 10px;
     padding-right: 10px;
     color: white;
-    width: 940px;
+    width: 945px;
 }
-#quoteimagecontainer p
+#quotecontainer p
 {
     margin-top: .5em;
     margin-bottom: .5em;
@@ -359,9 +359,9 @@ div#title
     font-size: 26px;
     font-weight: 600;
     text-align: justify;
-
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-#quoteimagecontainer .signature
+#quotecontainer .signature
 {
     font-style: italic;
     font-size: 18px;
