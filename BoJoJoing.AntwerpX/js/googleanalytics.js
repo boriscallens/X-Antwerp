@@ -1,4 +1,3 @@
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-31197917-1']);
   _gaq.push(['_setDomainName', 'x-antwerp.be']);

@@ -84,7 +84,7 @@ namespace BoJoJoing.AntwerpX.Controllers
                 // Theme Options			   
                 progress_bar = 0, 		    // Timer for each slide							
                 mouse_scrub = 1,
-                slides = slides
+                slides
             };
 
         }

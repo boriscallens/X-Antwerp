@@ -1,36 +1,24 @@
 /*
-
 Supersized - Fullscreen Slideshow jQuery Plugin
 Version : 3.2.7
 Theme 	: Shutter 1.1
+Edited by Bojojoing for the X-Antwerp project
 	
 Site	: www.buildinternet.com/project/supersized
 Author	: Sam Dunn
 Company : One Mighty Roar (www.onemightyroar.com)
 License : MIT License / GPL License
-
 */
 
 (function ($) {
 
     theme = {
-
-
         /* Initial Placement
         ----------------------------*/
         _init: function () {
 
             // Center Slide Links
             if (api.options.slide_links) $(vars.slide_list).css('margin-left', -$(vars.slide_list).width() / 2);
-
-            // Start progressbar if autoplay enabled
-            if (api.options.autoplay) {
-                if (api.options.progress_bar) theme.progressBar();
-            } else {
-                if ($(vars.play_button).attr('src')) $(vars.play_button).attr("src", vars.image_path + "play.png"); // If pause play button is image, swap src
-                if (api.options.progress_bar) $(vars.progress_bar).stop().animate({ left: -$(window).width() }, 0); //  Place progress bar
-            }
-
 
             /* Thumbnail Tray
             ----------------------------*/
@@ -39,17 +27,11 @@ License : MIT License / GPL License
 
             // Thumbnail Tray Toggle
             $(vars.tray_button).toggle(function () {
-                //alert("down");
                 $("#controls-wrapper").animate({ bottom: 0 }, 300);
-                //$("#controls-wrapper").stop().animate({ bottom: 0, avoidTransforms: true }, 300);
-                //alert("down");
-                //$(vars.thumb_tray).stop().animate({bottom : 0, avoidTransforms : true}, 300 );
                 if ($(vars.tray_arrow).attr('src')) $(vars.tray_arrow).attr("src", vars.image_path + "button-tray-down.png");
                 return false;
             }, function () {
-                //alert("up");
                 $("#controls-wrapper").stop().animate({ bottom: 500, avoidTransforms: true }, 300);
-                //$(vars.thumb_tray).stop().animate({bottom : -$(vars.thumb_tray).height(), avoidTransforms : true}, 300 );
                 if ($(vars.tray_arrow).attr('src')) $(vars.tray_arrow).attr("src", vars.image_path + "button-tray-up.png");
                 return false;
             });
@@ -110,15 +92,6 @@ License : MIT License / GPL License
             $(vars.prev_slide).click(function () {
                 api.prevSlide();
             });
-
-            // Full Opacity on Hover
-            //            if (jQuery.support.opacity) {
-            //                $(vars.prev_slide + ',' + vars.next_slide).mouseover(function () {
-            //                    $(this).stop().animate({ opacity: 1 }, 100);
-            //                }).mouseout(function () {
-            //                    $(this).stop().animate({ opacity: 0.6 }, 100);
-            //                });
-            //            }
 
             if (api.options.thumbnail_navigation) {
                 // Next thumbnail clicked
@@ -195,8 +168,6 @@ License : MIT License / GPL License
 
                 }
             });
-
-
         },
 
 
@@ -212,7 +183,7 @@ License : MIT License / GPL License
         /* Play & Pause Toggle
         ----------------------------*/
         playToggle: function (state) {
-
+        
             if (state == 'play') {
                 // If image, swap to pause
                 if ($(vars.play_button).attr('src')) $(vars.play_button).attr("src", vars.image_path + "pause.png");
@@ -238,26 +209,17 @@ License : MIT License / GPL License
                 (api.getField('title')) ? $(vars.slide_caption).html(api.getField('title')) : $(vars.slide_caption).html('');
             }
 
-
-
-            // JVRE 
-
-            if (api.getField('title').length == 0)
-                SetContentPanel(true);
-            else
-                SetContentPanel(false);
-
+            // Hide footer when no caption is present
+            toggleFooter(api.getField('title').length == 0);
+           
+            // When a quote text is present, put it in the quote container
             if (api.getField('quoteText').length != 0) {
                 $('#quotecontainer').html(api.getField('quoteText'));
                 $("#quotecontainer").css("display", "block");
             }
              else {
-                 $('#quotecontainer').html('');
                  $("#quotecontainer").css("display", "none");
             }
-
-            // END JVRE
-
 
             // Update slide number
             if (vars.slide_current.length) {

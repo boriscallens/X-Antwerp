@@ -22,14 +22,14 @@
                     .Add("~/css/media.css")
                     .Add("~/css/supersized.css")
                     .Add("~/css/supersized.shutter.css")
-            //.ForceRelease() // Test it out with minification
+                    //.ForceRelease() // Test it out with minification
                     .Render("~/css/style_#.css"))
     @RenderSection("HeadContent", false)
     @Html.Raw(Bundle.JavaScript()
                     .Add("~/js/libs/modernizr-2.5.3.js")
                     .Add("~/js/libs/respond.min.js")
                     .Add("~/js/googleanalytics.js")
-            //.ForceRelease()
+                    //.ForceRelease()
                     .Render("~/js/mondernizrandrespond_#.js"))
 </head>
 <body>
@@ -73,7 +73,7 @@
                     .Add("~/js/libs/supersized.shutter.js")
                     .Add("~/js/plugins.js")
                     .Add("~/js/script.js")
-                    .ForceRelease()
+                    //.ForceRelease()
                     .Render("~/js/script_#.js"))
     @RenderSection("ScriptSection", false)
     <!--[if lt IE 7 ]>

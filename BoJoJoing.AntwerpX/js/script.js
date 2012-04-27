@@ -4,39 +4,21 @@ jQuery(function ($) {
 });
 
 jQuery(function ($) {
-    var $height = 265;
-    var $arrow = "&darr;";
-    var $label = "verberg";
     $("#footer-toggle,#footer-toggle-layover,#quotecontainer").click(function () {
-        toggle();
-        $("#footer").stop().animate({ height: $height }, "fast", toggled());
+        toggleFooter($("#footer").height() > 38);
         /* remove focus from link so no dotted border appears */
         this.blur();
         return false;
+        //event.preventDefault();
     });
-
-    function toggle() {
-        if ($arrow == "&uarr;") {
-            $arrow = "&darr;";
-            $label = "verberg";
-            $height = 265;
-        } else {
-            $arrow = "&uarr;";
-            $label = "meer info";
-            $height = 38;
-        }
-    }
-    function toggled() {
-        $('.toggle-arrow').html($arrow);
-        $('.toggle-label').html($label);
-    }
 });
 
-function SetContentPanel(minimized) {
+function toggleFooter(minimized) {
     var $height;
     var $arrow;
     var $label;
-    if (minimized == true) {
+    
+    if (minimized) {
         //minimized
         $height = 38;
         $arrow = "&uarr;";
@@ -49,9 +31,9 @@ function SetContentPanel(minimized) {
     }
 
     $("#footer").stop().animate({ height: $height }, "fast", toggled());
-
     function toggled() {
         $('.toggle-arrow').html($arrow);
         $('.toggle-label').html($label);
     }
+    //return true;
 }
